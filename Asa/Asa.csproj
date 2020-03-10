@@ -4,16 +4,24 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
     <OutputType>Exe</OutputType>
-    <ReleaseVersion>2.1-alpha</ReleaseVersion>
     <LangVersion>8.0</LangVersion>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RuntimeIdentifiers>win-x64;linux-x64;osx-x64</RuntimeIdentifiers>
+    <Product>Microsoft Attack Surface Analyzer</Product>
+    <Version>0.0.0</Version>
+    <Authors>Microsoft</Authors>
+    <Company>Microsoft</Company>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright> 
+    <Description>Attack Surface Analyzer is a Microsoft-developed open source security tool that analyzes the attack surface of a target system and reports on potential security vulnerabilities introduced during the installation of software or system misconfiguration. This is a Dotnet Tool package. For the library package, see Microsoft.CST.AttackSurfaceAnalyzer.</Description>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>asa</ToolCommandName>
+    <PackageId>Microsoft.CST.AttackSurfaceAnalyzer.CLI</PackageId>
+    <PackageTags>Security Scanner</PackageTags>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/Microsoft/AttackSurfaceAnalyzer</PackageProjectUrl>
+    <PackageVersion>0.0.0</PackageVersion>
   </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PublishTrimmed>true</PublishTrimmed>
-  </PropertyGroup>
-  <ItemGroup>
-    <RuntimeHostConfigurationOption Include="System.Globalization.Invariant" Value="true" />
-  </ItemGroup>
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Collect' ">
     <StartAction>Project</StartAction>
