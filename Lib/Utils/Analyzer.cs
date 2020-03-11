@@ -323,6 +323,39 @@ namespace AttackSurfaceAnalyzer.Utils
                                 if (count == clause.Data.Count) { break; }
                                 return DEFAULT_RESULT_TYPE_MAP[compareResult.ResultType];
 
+                            case OPERATION.EARLIER_THAN:
+                                foreach(string datum in clause.Data)
+                                {
+                                    foreach(var val in valsToCheck)
+                                    {
+                                        var success = DateTime.TryParse(datum, out var dt1);
+                                        success &= DateTime.TryParse(val, out var dt2);
+
+                                        if (success && DateTime.Compare(dt1, dt2) < 0)
+                                        {
+                                            break;
+                                        }
+                                    }
+                                }
+                                return DEFAULT_RESULT_TYPE_MAP[compareResult.ResultType];
+
+                            case OPERATION.LATER_THAN:
+                                foreach (string datum in clause.Data)
+                                {
+                                    foreach (var val in valsToCheck)
+                                    {
+                                        var success = DateTime.TryParse(datum, out var dt1);
+                                        success &= DateTime.TryParse(val, out var dt2);
+
+                                        if (success && DateTime.Compare(dt1, dt2) > 0)
+                                        {
+                                            break;
+                                        }
+                                    }
+                                }
+                                return DEFAULT_RESULT_TYPE_MAP[compareResult.ResultType];
+
+
                             default:
                                 Log.Debug("Unimplemented operation {0}", clause.Operation);
                                 return DEFAULT_RESULT_TYPE_MAP[compareResult.ResultType];

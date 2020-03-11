@@ -119,7 +119,9 @@ namespace AttackSurfaceAnalyzer.Types
         DOES_NOT_CONTAIN,
         WAS_MODIFIED,
         ENDS_WITH,
-        STARTS_WITH
+        STARTS_WITH,
+        EARLIER_THAN,
+        LATER_THAN
     }
 
     /// <summary>
