@@ -5,7 +5,6 @@
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
     <OutputType>Exe</OutputType>
     <LangVersion>8.0</LangVersion>
-    <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RuntimeIdentifiers>win-x64;linux-x64;osx-x64</RuntimeIdentifiers>
     <Product>Microsoft Attack Surface Analyzer</Product>
@@ -19,6 +18,7 @@
     <PackageId>Microsoft.CST.AttackSurfaceAnalyzer.CLI</PackageId>
     <PackageTags>Security Scanner</PackageTags>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageIcon>icon-128.png</PackageIcon>
     <PackageProjectUrl>https://github.com/Microsoft/AttackSurfaceAnalyzer</PackageProjectUrl>
     <PackageVersion>0.0.0</PackageVersion>
   </PropertyGroup>
@@ -41,7 +41,10 @@
     <Content Include="..\LICENSE.txt" Link="LICENSE.txt" />
     <Content Include="..\NOTICE.txt" Link="NOTICE.txt" />
   </ItemGroup>
-
+  <ItemGroup>
+    <None Include="..\LICENSE.txt" Pack="true" PackagePath="" />
+    <None Include="..\icon-128.png" Pack="true" PackagePath="" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.7.82" />

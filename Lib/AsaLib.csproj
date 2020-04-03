@@ -15,6 +15,7 @@ This NuGet contains the AttackSurfaceAnalyzer Library, which is used by the CLI 
     <PackageId>Microsoft.CST.AttackSurfaceAnalyzer</PackageId>
     <PackageTags>Security Scanner</PackageTags>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageIcon>icon-128.png</PackageIcon>
     <PackageProjectUrl>https://github.com/Microsoft/AttackSurfaceAnalyzer</PackageProjectUrl>
     <PackageVersion>0.0.0</PackageVersion>
   </PropertyGroup>
@@ -63,6 +64,10 @@ This NuGet contains the AttackSurfaceAnalyzer Library, which is used by the CLI 
     <EmbeddedResource Include="..\filters.json" Link="filters.json" />
     <Content Include="..\LICENSE.txt" Link="LICENSE.txt" />
     <Content Include="..\NOTICE.txt" Link="NOTICE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\LICENSE.txt" Pack="true" PackagePath="" />
+    <None Include="..\icon-128.png" Pack="true" PackagePath="" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\AttackSurfaceAnalyzer.sln.licenseheader" Link="AttackSurfaceAnalyzer.sln.licenseheader" />
